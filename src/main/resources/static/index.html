@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadspildsFinder</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+</head>
+<body>
+
+<header class="hero">
+    <nav class="navbar">
+        <div class="logo">MadspildsFinder</div>
+    </nav>
+
+    <div class="hero-content">
+        <p class="eyebrow">SPIS GODT. SPILD MINDRE.</p>
+        <h1>Gode måltider.<br>Mindre madspild.</h1>
+        <p class="subtitle">
+            Find inspiration til lækre og billige måltider
+            baseret på lokale madspildstilbud.
+        </p>
+
+        <form id="search-form" class="search-form">
+            <input
+                    type="text"
+                    id="zip-code"
+                    placeholder="Indtast postnummer"
+                    maxlength="4"
+                    pattern="[0-9]{4}"
+                    inputmode="numeric"
+                    required
+            >
+            <button type="submit">Find opskrifter</button>
+        </form>
+    </div>
+</header>
+
+<main class="container">
+    <section id="results-section">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">MADINSPIRATION</p>
+                <h2>Dine opskrifter</h2>
+            </div>
+        </div>
+
+        <div id="loading" hidden>
+            Henter opskrifter...
+        </div>
+
+        <div id="error-message" class="error-message" hidden></div>
+
+        <div id="recipes-container" class="recipes-grid"></div>
+    </section>
+</main>
+
+<footer>
+    <p>MadspildsFinder – Gør gode råvarer til gode måltider.</p>
+</footer>
+
+</body>
+
+</html>
